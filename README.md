@@ -3,6 +3,5 @@
 ## Week 1
 ### [Syllabus](https://docs.google.com/document/d/1LPh1FuUM_OkRf-_Bm6qoioWURCxZ9yJi4zrzrqH9e0c/edit?tab=t.0)
 ### R & RStudio Installation 
-We will be using R and RStudio for the class 
 * [Installation](https://posit.co/download/rstudio-desktop/)
     * For more help, here is [D-Lab's Installation](https://github.com/dlab-berkeley/r-fundamentals?tab=readme-ov-file#installation-instructions) guide.
