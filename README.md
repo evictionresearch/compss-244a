@@ -5,3 +5,8 @@
 ### R & RStudio Installation 
 * [Installation](https://posit.co/download/rstudio-desktop/)
     * For more help, here is [D-Lab's Installation](https://github.com/dlab-berkeley/r-fundamentals?tab=readme-ov-file#installation-instructions) guide.
+ 
+### Readings: 
+* [Walker (2023) “Analyzing US Census Data: Methods, Maps, and Models in R”: Preface, Ch 1, & Ch 2](https://walker-data.com/census-r/index.html)
+* [Zuk et al. (2015) "Gentrification, Displacement and the Role of Public Investment: A Literature Review"](https://www.researchgate.net/profile/Karen-Chapple/publication/334638363_Gentrification_Displacement_and_the_Role_of_Public_Investment_A_Literature_Review/links/5d37697f4585153e591c453f/Gentrification-Displacement-and-the-Role-of-Public-Investment-A-Literature-Review.pdf)
+
