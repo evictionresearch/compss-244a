@@ -4,6 +4,7 @@
 ### [Slack Channel](https://calmacss.slack.com/archives/C089LTC8M54)
 
 ## Week 1 (1/22/25)
+### [Week 1 Slides](https://docs.google.com/presentation/d/1Icrbxa2hC8sd7pLZumYkBQZPJ_sISDZoaQ8D1dziLD0/edit#slide=id.g32100058b3b_0_3)
 ### R & RStudio Installation 
 * [Installation](https://posit.co/download/rstudio-desktop/)
     * For more help, here is [D-Lab's Installation](https://github.com/dlab-berkeley/r-fundamentals?tab=readme-ov-file#installation-instructions) guide.
