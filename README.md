@@ -15,6 +15,6 @@
 * [Zuk et al. (2015) "Gentrification, Displacement and the Role of Public Investment: A Literature Review"](https://www.researchgate.net/profile/Karen-Chapple/publication/334638363_Gentrification_Displacement_and_the_Role_of_Public_Investment_A_Literature_Review/links/5d37697f4585153e591c453f/Gentrification-Displacement-and-the-Role-of-Public-Investment-A-Literature-Review.pdf)
 
 ## Resources
-[Hands-On Programming with R](https://rstudio-education.github.io/hopr/) - Great for beginners with R and RStudio. 
-[D-Lab R Fundamentals Workshop](https://github.com/dlab-berkeley/R-Fundamentals) - Great course for beginners. 
-[R for Data Science](https://r4ds.hadley.nz) - Written by Hadley Wickham, author of tidy data theory and tidyverse. 
+* [Hands-On Programming with R](https://rstudio-education.github.io/hopr/) - Great for beginners with R and RStudio. [Chapter 2](https://rstudio-education.github.io/hopr/basics.html) walks you through the basics and interface of RStudio. 
+* [D-Lab R Fundamentals Workshop](https://github.com/dlab-berkeley/R-Fundamentals) - Great course for beginners. 
+* [R for Data Science](https://r4ds.hadley.nz) - Written by Hadley Wickham, author of tidy data theory and tidyverse. 
