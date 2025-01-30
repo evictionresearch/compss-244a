@@ -1,7 +1,13 @@
 # MaCSS 224a - Spring 2025: Forced Out: Decoding Housing Displacement through Data
 
-### [Syllabus](https://docs.google.com/document/d/1LPh1FuUM_OkRf-_Bm6qoioWURCxZ9yJi4zrzrqH9e0c/edit?tab=t.0)
-### [Slack Channel](https://calmacss.slack.com/archives/C089LTC8M54)
+### [Syllabus](https://docs.google.com/document/d/1LPh1FuUM_OkRf-_Bm6qoioWURCxZ9yJi4zrzrqH9e0c/edit?tab=t.0) & [Slack Channel](https://calmacss.slack.com/archives/C089LTC8M54)
+
+## Week 2 (1/29/25)
+### [Week 2 Slides](https://docs.google.com/presentation/d/1zi_P4A8AYsN868l4eqCC6yRRoqpH3CRvnV0hFvc96yo/edit#slide=id.g32100058b3b_0_3)
+
+## Readings:
+* [Walker (2023) “Analyzing US Census Data: Methods, Maps, and Models in R”: Ch 3 & 4](https://walker-data.com/census-r/wrangling-census-data-with-tidyverse-tools.html)
+* [Bates (2013) "Gentrification and Displacement Study: Implementing an Equitable Inclusive Development Strategy in the Context of Gentrification"](https://www.portland.gov/sites/default/files/2020-01/2-gentrification-and-displacement-study-05.18.13.pdf)
 
 ## Week 1 (1/22/25)
 ### [Week 1 Slides](https://docs.google.com/presentation/d/1Icrbxa2hC8sd7pLZumYkBQZPJ_sISDZoaQ8D1dziLD0/edit#slide=id.g32100058b3b_0_3)
