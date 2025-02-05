@@ -379,7 +379,7 @@ bay_area_ami %>%
         names_to = "race",
         values_to = "income"
     ) %>%
-    ggplot(aes(x = county, y = income, fill = race)) +
+    ggplot(aes(x = county, y = reorder(income, race), fill = race)) +
     geom_col(position = "dodge") +
     geom_hline(aes(yintercept = mean(bay_area_ami$ami)), linetype = "dashed", color = "red") +
     theme_minimal() +
