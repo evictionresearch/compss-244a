@@ -17,7 +17,7 @@ install.packages("tidycensus")  # Install the tidyverse package
 
 library(tidyverse)  # Load the tidyverse package
 library(tidycensus)  # Load the tidycensus package
-census_api_key("63217a192c5803bfc72aab537fe4bf19f6058326", install = TRUE)
+census_api_key("63217a192c5803bfc72aab537fe4bf19f6058326", overwrite = TRUE, install = TRUE)
 # you should replace this API key with your own. You can get one from the US
 # Census Bureau at https://api.census.gov/data/key_signup.html
 
@@ -86,7 +86,7 @@ jackson_median_income <- get_acs(
     geography = "county",
     variables = "B19013_001",  # Median household income
     year = 2022,
-    state = "MS",
+    state = "Mississippi",
     county = "Hinds"
 ) %>%
     mutate(
@@ -162,6 +162,9 @@ sf_ami_race_wide <- sf_ami_race %>%
         names_from = variable,
         values_from = estimate
     )
+
+pivot_wider
+help(pivot_wider)
 
 sf_ami_race_wide
 # The table is now wide however, it is not very readable. This is because
@@ -282,7 +285,12 @@ sf_race_ami_plot +
     # - scales::dollar_format() adds dollar signs and commas to numbers
     scale_y_continuous(labels = scales::dollar_format())
 
+
+######################
+### PICK UP WEEK 3 ###
+######################
 # Plotting with reordered bars
+
 ggplot(sf_ar_plot_df, aes(x = reorder(race, income), y = income)) +
     geom_bar(stat = "identity", fill = "steelblue") +
     geom_hline(yintercept = sf_ami_race_wide$low_income, linetype = "dashed", color = "red") +
@@ -368,14 +376,25 @@ bay_area_ami
 bay_area_ami %>%
     pivot_longer(
         cols = c(white, black, asian, latinx),
-        names = variable
+        names_to = "race",
+        values_to = "income"
+    ) %>%
+    ggplot(aes(x = county, y = income, fill = race)) +
+    geom_col(position = "dodge") +
+    geom_hline(aes(yintercept = mean(bay_area_ami$ami)), linetype = "dashed", color = "red") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(
+        title = "Median Household Income by Race Across Bay Area Counties",
+        x = "County",
+        y = "Median Household Income ($)",
+        fill = "Race/Ethnicity"
     )
 
-
 ######################################################################
 ######################################################################
 ######################################################################
-# EXCESS CODE
+# END CODE
 ######################################################################
 ######################################################################
 ######################################################################
