@@ -142,15 +142,13 @@ in_rates_clean_2019 <- in_rates %>%
 
 # How can we compare the eviction rate to the Black eviction rate?
 # We can make a scatter plot of the two variables.
-ggplot(in_rates_clean, aes(x = eviction_rate, y = black_eviction_rate)) +
+ggplot(in_rates_clean_2019, aes(x = eviction_rate, y = black_eviction_rate)) +
   geom_point() +
   theme_minimal() +
   geom_smooth(method = "loess", se = FALSE) +
   geom_smooth(method = "lm", se = FALSE) +
   geom_smooth(method = "gam", se = FALSE) +
   geom_smooth(method = "glm", se = FALSE) +
-
-
   labs(
     title = "Eviction Rate vs Black Eviction Rate in Indiana",
     x = "Eviction Rate",
@@ -161,7 +159,7 @@ ggplot(in_rates_clean, aes(x = eviction_rate, y = black_eviction_rate)) +
 
 # How can we compare the eviction rate to the Black eviction rate?
 # We can make a scatter plot of the two variables.
-ggplot(in_rates_clean, aes(x = p_black_renters, y = black_eviction_rate)) +
+ggplot(in_rates_clean_2019, aes(x = p_black_renters, y = black_eviction_rate)) +
   geom_point() +
   geom_smooth(method = "loess", se = FALSE) +
   geom_smooth(method = "lm", se = FALSE) +
