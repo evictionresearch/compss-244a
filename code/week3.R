@@ -60,7 +60,7 @@ in_rates <- indiana_evictions %>%
   )
 
 in_rates
-# Now lets attach rent burden, percent black renters, and total renters by
+# Now lets attach percent black renters and total renters by
 # county from the census to the eviction rates.
 # First we have to get the table numbers from the census
 vars_acs5_2022 <- load_variables(2022, 'acs5', cache = TRUE)
@@ -78,6 +78,7 @@ pivot_wider(
 )
 
 co_census
+
 #### Why did it give us NA's? ####
 
 co_census <- get_acs(
@@ -92,7 +93,7 @@ pivot_wider(
 )
 
 co_census
-
+qsave(co_census, "~/git/evictionresearch/MaCSS-244a-Spring25/data/census/in_co_renters.qs")
 # Now lets merge the census data to the eviction rates
 in_rates <- in_rates %>%
   left_join(co_census, by = c("county_geoid" = "GEOID"))
@@ -145,10 +146,10 @@ in_rates_clean_2019 <- in_rates %>%
 ggplot(in_rates_clean_2019, aes(x = eviction_rate, y = black_eviction_rate)) +
   geom_point() +
   theme_minimal() +
-  geom_smooth(method = "loess", se = FALSE) +
-  geom_smooth(method = "lm", se = FALSE) +
-  geom_smooth(method = "gam", se = FALSE) +
-  geom_smooth(method = "glm", se = FALSE) +
+  geom_smooth(method = "loess") +
+  # geom_smooth(method = "lm", se = FALSE) +
+  # geom_smooth(method = "gam", se = FALSE) +
+  # geom_smooth(method = "glm", se = FALSE) +
   labs(
     title = "Eviction Rate vs Black Eviction Rate in Indiana",
     x = "Eviction Rate",
@@ -162,12 +163,12 @@ ggplot(in_rates_clean_2019, aes(x = eviction_rate, y = black_eviction_rate)) +
 ggplot(in_rates_clean_2019, aes(x = p_black_renters, y = black_eviction_rate)) +
   geom_point() +
   geom_smooth(method = "loess", se = FALSE) +
-  geom_smooth(method = "lm", se = FALSE) +
-  geom_smooth(method = "gam", se = FALSE) +
-  geom_smooth(method = "glm", se = FALSE) +
+  # geom_smooth(method = "lm", se = FALSE) +
+  # geom_smooth(method = "gam", se = FALSE) +
+  # geom_smooth(method = "glm", se = FALSE) +
   theme_minimal() +
   labs(
-    title = "Eviction Rate vs Black Eviction Rate in Indiana",
+    title = "Neighborhood Percent Black vs Black Eviction Rate in Indiana",
     x = "Percent Black Renters",
     y = "Black Eviction Rate"
   )
