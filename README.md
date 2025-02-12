@@ -2,6 +2,13 @@
 
 ### [Syllabus](https://docs.google.com/document/d/1LPh1FuUM_OkRf-_Bm6qoioWURCxZ9yJi4zrzrqH9e0c/edit?tab=t.0) & [Slack Channel](https://calmacss.slack.com/archives/C089LTC8M54)
 
+## Week 3 (2/5/25)
+### [Week 3 Slides](https://docs.google.com/presentation/d/1nT-NPgH6JhO_JghZl_z3_OhEeOHgPd-o5Q_SaveIjXo/edit#slide=id.g32100058b3b_0_3)
+
+## Readings
+* [Walker (2023) “Analyzing US Census Data: Methods, Maps, and Models in R”: Ch 5 & 6](https://walker-data.com/census-r/census-geographic-data-and-applications-in-r.html)
+* [Carlson (2020) “Measuring Displacement: Assessing Proxies for Involuntary Residential Mobility”](https://journals.sagepub.com/doi/pdf/10.1111/cico.12482)
+
 ## Week 2 (1/29/25)
 ### [Week 2 Slides](https://docs.google.com/presentation/d/1zi_P4A8AYsN868l4eqCC6yRRoqpH3CRvnV0hFvc96yo/edit#slide=id.g32100058b3b_0_3)
 
