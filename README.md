@@ -1,6 +1,6 @@
 # MaCSS 224a - Spring 2025: Forced Out: Decoding Housing Displacement through Data
 
-### [Syllabus](https://docs.google.com/document/d/1LPh1FuUM_OkRf-_Bm6qoioWURCxZ9yJi4zrzrqH9e0c/edit?tab=t.0) & [Slack Channel](https://calmacss.slack.com/archives/C089LTC8M54)
+### [Syllabus](https://bcourses.berkeley.edu/courses/1540132/assignments/syllabus) & [Slack Channel](https://calmacss.slack.com/archives/C089LTC8M54)
 
 ## Week 3 (2/5/25)
 ### [Week 3 Slides](https://docs.google.com/presentation/d/1nT-NPgH6JhO_JghZl_z3_OhEeOHgPd-o5Q_SaveIjXo/edit#slide=id.g32100058b3b_0_3)
