@@ -17,7 +17,7 @@ install.packages("librarian")
 library(librarian)
 # and then you can load the packages you need with:
 shelf(tidyverse, tigris, sf, ggplot2, viridis)
-# If one of these packaes is not installed, librarian will install it for you
+# If one of these packages is not installed, librarian will install it for you
 # and then load it.
 
 # You can also call the shelf function without loading the packages:
@@ -26,6 +26,7 @@ librarian::shelf(tidyverse, tigris, sf, ggplot2, viridis)
 
 # You can also use librarian to install packages from github:
 librarian::shelf(posit / tidyverse)
+librarian::shelf(evictionresearch / neighborhood)
 # Just call the organization and repository name.
 
 # For our lesson today, we will draw on these packages:
@@ -126,9 +127,11 @@ acs_inc <- get_acs(
   geography = "tract",
   variables = inc_groups, # another way is to use 'table = "B19001"'
   state = "IN",
-  county = "Marion", # county that holds Indianapolis, the state capitoal of Indiana.
+  county = "Marion", # county that holds Indianapolis, the state capitol of Indiana.
   year = 2022
 )
+
+acs_inc
 
 # get the number of people below 80% ami
 li_count <- acs_inc %>%
@@ -268,7 +271,7 @@ ggplot(li_count_adj, aes(x = p_li)) +
     ) +
     theme_minimal()
 
-# I'm often a little suspiciouse when I see things out of place. For example, I have a lot of zeros. Five in fact. Let's check to make sure that this is correct in our data.
+# I'm often a little suspicious when I see things out of place. For example, I have a lot of zeros. Five in fact. Let's check to make sure that this is correct in our data.
 
 li_count_adj %>% filter(p_li == 0)
 
@@ -294,7 +297,7 @@ li_count_adj %>% filter(p_li == 0)
 
 # Let's download the spatial data.
 
-indiana_tracts <- tracts(state = "IN", county = "Marion") # I could download all the tracts in Indiana by ommitting the county argument.
+indiana_tracts <- tracts(state = "IN", county = "Marion") # I could download all the tracts in Indiana by omitting the county argument.
 
 # let's look at the data
 
@@ -352,7 +355,7 @@ class(li_sf2)
 # Now it's an sf object.
 # Or we can use the st_as_sf() function.
 
-li_sf3 <- st_as_sf(li_sf)
+li_sf3 <- st_as_sf(li_sf) 
 
 glimpse(li_sf3)
 class(li_sf3)
@@ -374,7 +377,8 @@ tm_shape(li_sf3) +
     # col = "p_li" - colors polygons based on p_li column
     # title - sets the legend title
     # palette - uses the "Blues" color scheme from RColorBrewer
-    tm_polygons(col = "p_li",
+    tm_polygons(
+        col = "p_li",
         title = "Proportion of Low-Income Residents",
         palette = "Blues"
     )
@@ -415,7 +419,7 @@ tm_shape(li_sf3) +
     tm_fill(col = "p_li",
         title = "Proportion of Low-Income Residents",
         palette = "Reds",
-        alpha = .5,
+        # alpha = .5,
         style = "sd")
 # Note that this changed the legend breaks in the legend.
 # Review the tmap documentation for more information on the different styles and parameters. https://r-tmap.github.io/tmap/
@@ -453,6 +457,7 @@ tm_shape(ie) +
     tm_fill(col = "filings",
         title = "Number of Evictions",
         palette = "Reds",
-        alpha = .5)
+        alpha = .5, 
+        style = "jenks")
 
 # We can calculate the rate, which is more informative. Say we wanted to calculate the Black rate of eviction, what table would we need to join?
